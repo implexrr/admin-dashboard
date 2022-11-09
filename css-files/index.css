@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: clamp(200px, 20%, 300px) 10fr;
+  grid-template-rows: 2fr 8fr;
+  grid-template-areas: 
+  "dashboard-menu top-banner"
+  "dashboard-menu  main-dashboard"
+  ;
+}
+
+#dashboard-menu {
+  grid-area: dashboard-menu;
+  background-color: aqua;
+}
+
+#top-banner {
+  grid-area: top-banner;
+  background-color: red;
+}
+
+#main-dashboard {
+  grid-area: main-dashboard;
+  background-color: purple;
+}
