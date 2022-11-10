@@ -94,9 +94,9 @@ body {
   background-color: green;
   grid-area: 2 / 1 / 3 / 2;
   display: grid;
+  column-gap: 50px;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 1fr 1fr;
-  column-gap: 20px;
   align-items: center;
 }
 
@@ -182,6 +182,44 @@ body {
   display: grid;
   grid-template-rows: 50px 1fr 1fr 1fr 1fr;
 }
+
 .trending * {
   border: solid blue;
+}
+
+.trender {
+  background-color: green;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 40px;
+  align-items: center;
+}
+
+.trender .prof-pic {
+  grid-area: 1 / 1 / -1 / 2;
+}
+
+.trender .handle, .trender .proj-name {
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+}
+
+.trender .proj-name {
+  align-items: flex-start;
+}
+.announcement {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.announcement .title {
+  width: 100%;
+  height: 20px;
+}
+
+.announcement .description {
+  width: 100%;
+  height: calc(100% - 20px);
 }
