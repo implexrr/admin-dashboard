@@ -8,13 +8,15 @@ ul {
   list-style-type: none;
 }
 
+
 body {
   height: 100vh;
   width: 100%;
+  margin: 0px;
+  padding: 0px;
   display: grid;
-  grid-template-columns: clamp(200px, 20%, 300px) 1fr;
+  grid-template-columns: max(20vh, 20%) max(80vh, 80%);
   grid-template-rows: 200px 1fr;
-  /* grid-template-rows: minmax(200px, 2fr) minmax(300px, 8fr); */
   grid-template-areas: 
   "dashboard-menu top-banner"
   "dashboard-menu  main-dashboard"
