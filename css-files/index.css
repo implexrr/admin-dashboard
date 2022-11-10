@@ -153,9 +153,25 @@ body {
 }
 
 .project {
-  display: grid;
+  box-sizing: border-box;
   height: 200px;
   border: solid 2px red;
+  display: grid;
+  grid-template-rows: 20% 65% 15%;
+  padding: 10px;
+}
+
+.project-title, .project-description, .project-icons {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.project-icons {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .right-side {
@@ -223,3 +239,4 @@ body {
   width: 100%;
   height: calc(100% - 20px);
 }
+
