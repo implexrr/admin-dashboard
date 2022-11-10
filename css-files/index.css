@@ -134,5 +134,54 @@ body {
 #main-dashboard {
   grid-area: main-dashboard;
   background-color: purple;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
 }
 
+.project-cards {
+  padding: 15px;
+  grid-column: 1 / 2;
+  background-color: bisque;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+}
+
+.cards {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project {
+  display: grid;
+  height: 200px;
+  border: solid 2px red;
+}
+
+.right-side {
+  grid-column: 2 / 3;
+  background-color: brown;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding: 10px;
+}
+
+.announcements {
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-rows: 50px 1fr 1fr 1fr;
+}
+
+.announcements * {
+  border: solid black;
+  margin-bottom: 10px;
+}
+
+.trending {
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-rows: 50px 1fr 1fr 1fr 1fr;
+}
+.trending * {
+  border: solid blue;
+}
