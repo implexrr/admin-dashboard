@@ -3,7 +3,7 @@
   --dashboard-text-color: white;
   --button-text-color: white;
   --card-bg-color: white;
-  --card-description-color: #4b5563;
+  --card-description-color: #4b5563ac;
   --card-title-color: black;
   --top-banner-text-color: #323943;
   --searchbar-icon-color: #1e293b;
@@ -232,12 +232,14 @@ img {
   grid-template-rows: 50px 1fr;
 }
 
-.project-cards .header {
+.header {
   font-weight: 600;
   font-size: 20px;
 }
 
-/* I WAS HERE */
+.project-cards .project-description {
+  color: var(--card-description-color);
+}
 
 .cards {
   display: grid;
@@ -297,12 +299,22 @@ img {
 .announcements {
   grid-row: 1 / 2;
   display: grid;
-  grid-template-rows: 50px 1fr 1fr 1fr;
+  grid-template-rows: 50px 1fr;
 }
 
-.announcements * {
-  border: solid black;
-  margin-bottom: 10px;
+
+
+.announcement-cards {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.announcement-card {
+  display: grid;
+  padding: 10px;
+  grid-template-rows: 25px 1fr;
+  background-color: var(--card-bg-color);
+  box-shadow: var(--card-box-shadow);
 }
 
 .trending {
