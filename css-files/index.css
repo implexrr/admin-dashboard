@@ -14,6 +14,8 @@
   --card-border: #fde047;
   --card-color: #f8fafc;
   --card-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  --announcement-card-bottom: #45484d66;
+
 }
 
 * {
@@ -249,7 +251,7 @@ img {
 
 .card {
   box-sizing: border-box;
-  height: 200px;
+  height: 100%;
   display: grid;
   grid-template-rows: 20% 60% 20%;
   padding: 10px;
@@ -300,22 +302,41 @@ img {
   grid-row: 1 / 2;
   display: grid;
   grid-template-rows: 50px 1fr;
+  margin-bottom: 5%;
 }
-
 
 
 .announcement-cards {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
+  box-shadow: var(--card-box-shadow);
 }
 
 .announcement-card {
   display: grid;
-  padding: 10px;
-  grid-template-rows: 25px 1fr;
+  padding: 0px 10px;
+  grid-template-rows: 30px 50px;
   background-color: var(--card-bg-color);
-  box-shadow: var(--card-box-shadow);
 }
+
+.announcement-card .title {
+  display: grid;
+  align-items: flex-end;
+  border-top: solid 2px var(--announcement-card-bottom);
+  color: var(--card-title-color);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.announcement-card .description {
+  font-size: 12px;
+}
+
+.announcement-card:first-child .title{
+  border: none;
+}
+
+
 
 .trending {
   grid-row: 2 / 3;
@@ -362,9 +383,10 @@ img {
   height: 20px;
 }
 
-.announcement .description {
+.announcements .description {
   width: 100%;
   height: calc(100% - 20px);
+  color: var(--card-description-color);
 }
 
 #top-banner button {
