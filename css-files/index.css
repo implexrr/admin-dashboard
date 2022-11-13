@@ -42,6 +42,9 @@ body {
   width: 100%;
   margin: 0px;
   padding: 0px;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   display: grid;
   grid-template-columns: max(250px, 20%) max(80vh, 80%);
   grid-template-rows: max-content 1fr;
@@ -49,6 +52,10 @@ body {
   "dashboard-menu top-banner"
   "dashboard-menu  main-dashboard"
   ;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 #dashboard-menu {
@@ -290,44 +297,43 @@ img {
 
 .right-side {
   grid-column: 2 / 3;
-  /* background-color: brown; */
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  padding: 10px;
+  grid-template-rows: 4fr 3fr;
+  row-gap: 15px;
+  padding: 15px;
 }
 
 .announcements {
   grid-row: 1 / 2;
-  padding-top: 5px;
   display: grid;
   grid-template-rows: 50px 1fr;
-  margin-bottom: 5%;
 }
 
 
 .announcement-cards {
+  box-sizing: border-box;
+  padding: 20px;
   display: grid;
   border-radius: 15px;
   background-color: var(--card-bg-color);
   grid-template-rows: 1fr 1fr 1fr;
   box-shadow: var(--card-box-shadow);
-  overflow-y: scroll;
+  /* overflow-y: scroll;
   padding: 0px 20px;
   -ms-overflow-style: none;
-  scrollbar-width: none;
-  /* I WAS HERE */
+  scrollbar-width: none; */
 }
 
-.announcement-cards::-webkit-scrollbar {
+/* .announcement-cards::-webkit-scrollbar {
   display: none;
-}
+} */
 
 
 
 .announcement-card {
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 30px 50px;
+  grid-template-rows: 20px 65px;
 }
 
 .announcement-card .title {
@@ -337,13 +343,11 @@ img {
   color: var(--card-title-color);
   font-size: 14px;
   font-weight: 600;
-  /* margin: 10px 20px; */
+
 }
 
 .announcement-card .description {
   font-size: 12px;
-  /* margin: 10px 20px; */
-  /* padding-right: 20px; */
 }
 
 .announcement-card:first-child .title{
@@ -356,7 +360,6 @@ img {
   grid-row: 2 / 3;
   display: grid;
   grid-template-rows: 50px 1fr;
-  padding-bottom: 5px;
 }
 
 .trender-cards {
@@ -365,12 +368,11 @@ img {
   box-shadow: var(--card-box-shadow);
   background-color: var(--card-bg-color);
   border-radius: 15px;
+  font-size: 14px;
 }
 
 .trender {
-
   display: grid;
-  
   grid-template-columns: 1fr 5fr;
   column-gap: 10px;
   padding-left: 10px;
@@ -381,17 +383,19 @@ img {
 
 .trender .prof-pic {
   grid-area: 1 / 1 / -1 / 2;
-
 }
 
 .trender .handle, .trender .proj-name {
   display: flex;
   height: 100%;
   align-items: flex-end;
+  color: var(--card-title-color);
+  font-size: 12px;
 }
 
 .trender .proj-name {
   align-items: flex-start;
+  color: var(--card-description-color);
 }
 .announcement {
   display: flex;
