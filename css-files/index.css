@@ -2,7 +2,7 @@
   --dashboard-bg-color: #0ea5e9;
   --dashboard-text-color: white;
   --button-text-color: white;
-  --card-bg-color: white;
+  --card-bg-color: #f8fafc;
   --card-description-color: #4b5563ac;
   --card-title-color: black;
   --top-banner-text-color: #323943;
@@ -289,6 +289,44 @@ img {
   box-shadow: var(--card-box-shadow);
 }
 
+svg {
+  box-sizing: border-box;
+  padding: 2px;
+  border-radius: 15px;
+}
+
+#slide {
+  position: absolute;
+  left: -400px;
+  width: 400px;
+  height: 400px;
+  background: var(--card-border);
+  opacity: 0.3;
+  transition: 1s;
+  pointer-events: none;
+}
+
+.card:hover svg {
+  cursor: pointer;
+}
+
+.card svg:hover {
+  background-color: var(--dashboard-bg-color);
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+img[id="slide"] {
+  border-radius: 0;
+}
+
+.card:hover #slide {
+  transition: 0.4s;
+  left: 0;
+}
+
 .project-title, .project-description, .project-icons {
   display: flex;
   width: 100%;
@@ -311,11 +349,12 @@ img {
 .project-icons button {
   appearance: none;
   box-sizing: border-box;
-  width: 30px;
   margin-right: 10px;
   border-radius: 100%;
   border: none;
   background-color: var(--card-color);
+  display: flex;
+  justify-content: center;
 }
 
 .right-side {
