@@ -333,21 +333,23 @@ img {
 .announcement-card {
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 20px 65px;
+  grid-template-rows: 20% 80%;
+  min-width: 50px;
 }
 
 .announcement-card .title {
-  display: grid;
+  display: flex;
   align-items: flex-end;
-  border-top: solid 2px var(--announcement-card-bottom);
+
   color: var(--card-title-color);
+  box-shadow: rgba(73, 70, 72, 0.4) 0px 5px;
   font-size: 14px;
   font-weight: 600;
-
 }
 
 .announcement-card .description {
   font-size: 12px;
+  padding-top: 5px;
 }
 
 .announcement-card:first-child .title{
