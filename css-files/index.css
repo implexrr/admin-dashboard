@@ -1,11 +1,3 @@
-@keyframes shake {
-  0% { transform:rotate(10deg); }
-  25% { transform:rotate(0deg); }
-  50% { transform: rotate(-10deg); }
-  75% { transform: rotate(0deg); }
-  100% { transform: rotate(10deg); }
-}
-
 :root {
   --dashboard-bg-color: #0ea5e9;
   --dashboard-text-color: white;
@@ -31,11 +23,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', 'Open Sans', sans-serif;
-}
-
-button:hover {
-  cursor: pointer;
-  opacity: 0.8;
 }
 
 
@@ -81,7 +68,7 @@ body::-webkit-scrollbar {
 }
 
 
-#burger {
+.burger {
   grid-row: 1 / 2;
   min-height: 100px;
   font-size: 24px;
@@ -131,17 +118,6 @@ body::-webkit-scrollbar {
   padding: 4px;
 }
 
-#options ul li:hover {
-  box-shadow: var(--options-hover-box-shadow);
-  cursor: pointer;
-  transition: ease-in-out 0.3s;
-}
-
-#options ul li:empty:hover {
-  cursor: default;
-  box-shadow: none;
-}
-
 #options ul::-webkit-scrollbar {
   display: none;
 }
@@ -181,11 +157,6 @@ body::-webkit-scrollbar {
   padding-left: 10px;
 }
 
-.top-left input[id="search"]:hover, .top-left input[id="search"]:focus{
-  opacity: 0.8;
-  outline: none;
-}
-
 .top-left label[for="search"] {
   cursor: pointer;
 }
@@ -211,15 +182,6 @@ body::-webkit-scrollbar {
 
 .top-right .prof-pic {
   max-width: 80px;
-}
-
-.top-right .prof-pic:hover {
-  opacity: 0.8;
-}
-
-#notif:hover {
-    animation: shake 0.2s;
-    animation-iteration-count: infinite;
 }
 
 
@@ -347,25 +309,12 @@ svg {
   pointer-events: none;
 }
 
-.card:hover svg {
-  cursor: pointer;
-}
-
-.card svg:hover {
-  background-color: var(--dashboard-bg-color);
-}
-
 .card {
   position: relative;
   overflow: hidden;
 }
 img[id="slide"] {
   border-radius: 0;
-}
-
-.card:hover #slide {
-  transition: 0.7s;
-  left: 0;
 }
 
 .project-title, .project-description, .project-icons {
@@ -446,11 +395,6 @@ img[id="slide"] {
   font-weight: 600;
 }
 
-.announcement-card .title:hover {
-  color: var(--dashboard-bg-color);
-  cursor: pointer;
-}
-
 .announcement-card .description {
   font-size: 12px;
   padding-top: 5px;
@@ -474,19 +418,6 @@ img[id="slide"] {
   border-radius: 15px;
   font-size: 14px;
 
-}
-
-.trender:hover {
-  opacity: 0.8;
-  background-color: var(--dashboard-bg-color)
-}
-
-.trender:hover .proj-name, .trender:hover .handle {
-  color: var(--dashboard-text-color);
-}
-
-.trender *:hover {
-  cursor:pointer;
 }
 
 .trender {
@@ -562,4 +493,77 @@ img[id="slide"] {
 
 .create li {
   padding-left: 15px;
+}
+
+
+/* ANIMATIONS */
+/* ----------------------------------------- */
+
+@keyframes shake {
+  0% { transform:rotate(10deg); }
+  25% { transform:rotate(0deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(0deg); }
+  100% { transform: rotate(10deg); }
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#options ul li:hover {
+  box-shadow: var(--options-hover-box-shadow);
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+#options ul li:empty:hover {
+  cursor: default;
+  box-shadow: none;
+}
+
+.top-left input[id="search"]:hover, .top-left input[id="search"]:focus{
+  opacity: 0.8;
+  outline: none;
+}
+
+.top-right .prof-pic:hover {
+  opacity: 0.8;
+}
+
+#notif:hover {
+    animation: shake 0.2s;
+    animation-iteration-count: infinite;
+}
+
+.card:hover svg {
+  cursor: pointer;
+}
+
+.card svg:hover {
+  background-color: var(--dashboard-bg-color);
+}
+
+.card:hover #slide {
+  transition: 0.7s;
+  left: 0;
+}
+
+.announcement-card .title:hover {
+  color: var(--dashboard-bg-color);
+  cursor: pointer;
+}
+
+.trender:hover {
+  opacity: 0.8;
+  background-color: var(--dashboard-bg-color)
+}
+
+.trender:hover .proj-name, .trender:hover .handle {
+  color: var(--dashboard-text-color);
+}
+
+.trender *:hover {
+  cursor:pointer;
 }
