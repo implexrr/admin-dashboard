@@ -145,6 +145,10 @@ body {
   justify-content: flex-end;
 }
 
+label[for="search"], .top-right * {
+  cursor: pointer;
+}
+
 /* Top left section */
 .top-left {
   grid-area: top-left;
@@ -160,18 +164,10 @@ input[id="search"] {
   border: none;
 }
 
-label[for="search"] {
-  cursor: pointer;
-}
-
 .top-right {
   grid-area: top-right;
   font-size: 18px;
   font-weight: 600;
-}
-
-.top-right * {
-  cursor: pointer;
 }
 
 .top-right div {
@@ -483,9 +479,12 @@ img[id="slide"] {
   100% { transform: rotate(10deg); }
 }
 
+#options li:hover, .card:hover svg, .project-title span:hover, .announcement-card .title span:hover, .trender:hover .proj-name, .trender:hover .handle, button:hover, .trender *:hover{
+  cursor: pointer;
+}
+
 #options li:hover {
   box-shadow: var(--options-hover-box-shadow);
-  cursor: pointer;
   transition: ease-in-out 0.2s;
 }
 
@@ -508,10 +507,6 @@ img[id="slide"] {
     animation-iteration-count: infinite;
 }
 
-.card:hover svg {
-  cursor: pointer;
-}
-
 .card svg:hover {
   background-color: var(--menu-bg-color);
 }
@@ -523,13 +518,11 @@ img[id="slide"] {
 
 .project-title span:hover {
   color: var(--card-border-opposite);
-  cursor: pointer;
   opacity: 1;
 }
 
 .announcement-card .title span:hover {
   color: var(--menu-bg-color);
-  cursor: pointer;
 }
 
 .trender:hover {
@@ -539,10 +532,5 @@ img[id="slide"] {
 .trender:hover .proj-name, .trender:hover .handle, button:hover {
   color: var(--menu-text-color);
   background-color: var(--menu-bg-color);
-  cursor: pointer;
   opacity: 0.8;
-}
-
-.trender *:hover {
-  cursor: pointer;
 }
