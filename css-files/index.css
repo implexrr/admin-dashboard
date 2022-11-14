@@ -1,7 +1,8 @@
+/* VARIABLES */
+/* ---------------------------------------------------- */
 :root {
-  --dashboard-bg-color: #0ea5e9;
-  --dashboard-text-color: white;
-  --button-text-color: white;
+  --menu-bg-color: #0ea5e9;
+  --menu-text-color: white;
   --card-bg-color: #f8fafc;
   --card-description-color: #4b5563ac;
   --card-title-color: black;
@@ -18,13 +19,14 @@
   --options-hover-box-shadow: inset 5px 5px 50px 50px rgba(0,0,0,0.19);
 }
 
+/* ENTIRE DOCUMENT/META */
+/* ---------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', 'Open Sans', sans-serif;
 }
-
 
 .prof-pic {
   display: flex;
@@ -41,42 +43,45 @@ ul {
 body {
   height: 100vh;
   width: 100%;
-  margin: 0px;
-  padding: 0px;
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+
   display: grid;
   grid-template-columns: max(250px, 20%) max(80vh, 80%);
   grid-template-rows: max-content 1fr;
   grid-template-areas: 
-  "dashboard-menu top-banner"
-  "dashboard-menu  main-dashboard"
+  "menu top-banner"
+  "menu  main-dashboard"
   ;
 }
-
 body::-webkit-scrollbar {
   display: none;
 }
 
-#dashboard-menu {
-  grid-area: dashboard-menu;
-  background-color: var(--dashboard-bg-color);
-  color: var(--dashboard-text-color);
+/* LEFT-SIDE BURGER MENU */
+/* ---------------------------------------------------- */
+.menu {
+  grid-area: menu;
+  background-color: var(--menu-bg-color);
+  color: var(--menu-text-color);
   display: grid;
   grid-template-rows: 1fr 10fr;
 }
-
 
 .burger {
   grid-row: 1 / 2;
   min-height: 100px;
   font-size: 24px;
   font-weight: 700;
-  padding: 20px;
+  padding-left: 10px;
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  column-gap: max(10px,10%);
 }
 
-#dashboard-menu * {
+#menu * {
   border-radius: 0;
 }
 
@@ -98,8 +103,6 @@ body::-webkit-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
-
 
 #options ul li {
   width: 100%;
@@ -479,8 +482,8 @@ img[id="slide"] {
   width: 90px;
   border: none;
   overflow: hidden;
-  background-color: var(--dashboard-bg-color);
-  color: var(--button-text-color);
+  background-color: var(--menu-bg-color);
+  color: var(--menu-text-color);
   font-weight: 500;
   font-size: 15px;
 }
@@ -497,19 +500,13 @@ img[id="slide"] {
 
 
 /* ANIMATIONS */
-/* ----------------------------------------- */
-
+/* ---------------------------------------------------- */
 @keyframes shake {
   0% { transform:rotate(10deg); }
   25% { transform:rotate(0deg); }
   50% { transform: rotate(-10deg); }
   75% { transform: rotate(0deg); }
   100% { transform: rotate(10deg); }
-}
-
-button:hover {
-  cursor: pointer;
-  opacity: 0.8;
 }
 
 #options ul li:hover {
@@ -542,7 +539,7 @@ button:hover {
 }
 
 .card svg:hover {
-  background-color: var(--dashboard-bg-color);
+  background-color: var(--menu-bg-color);
 }
 
 .card:hover #slide {
@@ -551,17 +548,19 @@ button:hover {
 }
 
 .announcement-card .title:hover {
-  color: var(--dashboard-bg-color);
+  color: var(--menu-bg-color);
   cursor: pointer;
 }
 
 .trender:hover {
-  opacity: 0.8;
-  background-color: var(--dashboard-bg-color)
+  background-color: var(--menu-bg-color);
 }
 
-.trender:hover .proj-name, .trender:hover .handle {
-  color: var(--dashboard-text-color);
+.trender:hover .proj-name, .trender:hover .handle, button:hover {
+  color: var(--menu-text-color);
+  background-color: var(--menu-bg-color);
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .trender *:hover {
