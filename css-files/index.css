@@ -32,6 +32,11 @@
   font-family: 'Poppins', 'Open Sans', sans-serif;
 }
 
+button {
+  appearance: none;
+  border: none;
+}
+
 .prof-pic {
   display: flex;
   width: 100%;
@@ -120,6 +125,7 @@ body {
 
 /* TOP BANNER */
 /* ---------------------------------------------------- */
+/* Top banner meta */
 #top-banner {
   grid-area: top-banner;
   background-color: var(--top-banner-bg-color);
@@ -164,6 +170,7 @@ input[id="search"] {
   border: none;
 }
 
+/* Top right section */
 .top-right {
   grid-area: top-right;
   font-size: 18px;
@@ -187,6 +194,7 @@ img {
   object-fit: contain;
 }
 
+/* Bottom left section */
 .bottom-left {
   grid-area: bottom-left;
   display: grid;
@@ -218,25 +226,53 @@ img {
   font-weight: 700;
 }
 
+/* Bottom right section */
 .bottom-right {
   grid-area: bottom-right;
+}
+
+#top-banner button {
+  border-radius: 20px;
+  height: 40px;
+  width: 90px;
+  overflow: hidden;
+  background-color: var(--menu-bg-color);
+  color: var(--menu-text-color);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.create li {
+  padding-left: 15px;
 }
 
 
 /* MAIN DASHBOARD */
 /* ---------------------------------------------------- */
+/* Main Dashboard - Left Side (project cards) */
+#main-dashboard, .project-cards, .cards, .card {
+  display: grid;
+}
+
+.project-title, .project-description, .project-icons, .project-icons button {
+  display: flex;
+}
+
+.project-title, .project-description, .project-icons {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
 #main-dashboard {
   grid-area: main-dashboard;
   background-color: var(--main-dashboard-color);
   box-shadow: var(--main-dashboard-box-shadow);
-  display: grid;
   grid-template-columns: 5fr 2fr;
 }
 
 .project-cards {
   padding: 15px;
   grid-column: 1 / 2;
-  display: grid;
   grid-template-rows: 50px 1fr;
 }
 
@@ -252,14 +288,12 @@ img {
 }
 
 .cards {
-  display: grid;
   gap: 15px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .card {
   height: 100%;
-  display: grid;
   grid-template-rows: 20% 60% 20%;
   padding: 10px;
   border-left: solid 8px #fde047;
@@ -292,38 +326,29 @@ img[id="slide"] {
   border-radius: 0;
 }
 
-.project-title, .project-description, .project-icons {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
 .project-title {
   font-size: 20px;
   font-weight: 600;
 }
 
 .project-icons {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
 }
 
 .project-icons button {
-  appearance: none;
   margin-right: 10px;
   border-radius: 100%;
-  border: none;
   background-color: var(--card-color);
-  display: flex;
   justify-content: center;
 }
 
+/* Main Dashboard -- Right Side */
+.right-side, .announcements, .announcement-cards, .announcement-card, .trending, .trender, .trender-cards {
+  display: grid;
+}
 .right-side {
   grid-column: 2 / 3;
-  display: grid;
   grid-template-rows: 4fr 3fr;
   row-gap: 15px;
   padding: 15px;
@@ -331,14 +356,11 @@ img[id="slide"] {
 
 .announcements {
   grid-row: 1 / 2;
-  display: grid;
   grid-template-rows: 50px 1fr;
 }
 
-
 .announcement-cards {
   padding: 20px;
-  display: grid;
   border-radius: 15px;
   background-color: var(--card-bg-color);
   grid-template-rows: 1fr 1fr 1fr;
@@ -346,7 +368,6 @@ img[id="slide"] {
 }
 
 .announcement-card {
-  display: grid;
   grid-template-rows: 20% 80%;
   min-width: 50px;
 }
@@ -372,12 +393,10 @@ img[id="slide"] {
 
 .trending {
   grid-row: 2 / 3;
-  display: grid;
   grid-template-rows: 50px 1fr;
 }
 
 .trender-cards {
-  display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   box-shadow: var(--card-box-shadow);
   background-color: var(--card-bg-color);
@@ -387,7 +406,6 @@ img[id="slide"] {
 }
 
 .trender {
-  display: grid;
   grid-template-columns: 1fr 5fr;
   column-gap: 10px;
   padding-left: 10px;
@@ -436,29 +454,6 @@ img[id="slide"] {
   width: 100%;
   height: calc(100% - 20px);
   color: var(--card-description-color);
-}
-
-#top-banner button {
-  appearance: none;
-  border-radius: 20px;
-  height: 40px;
-  width: 90px;
-  border: none;
-  overflow: hidden;
-  background-color: var(--menu-bg-color);
-  color: var(--menu-text-color);
-  font-weight: 500;
-  font-size: 15px;
-}
-
-.create {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-}
-
-.create li {
-  padding-left: 15px;
 }
 
 
