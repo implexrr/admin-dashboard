@@ -1,0 +1,2 @@
+Add midnight/color change mode
+Add burger animation functionality
