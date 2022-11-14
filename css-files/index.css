@@ -93,8 +93,7 @@ body {
   min-height: 100px;
   font-size: 24px;
   font-weight: 700;
-  padding-left: 10px;
-  padding-top: 20px;
+  padding: 20px 10px;
 }
 
 #options {
@@ -126,37 +125,46 @@ body {
   display: grid;
   grid-template-columns: 5fr 2fr;
   grid-template-rows: 2fr 3fr;
+  grid-template-areas: 
+  "top-left top-right"
+  "bottom-left  bottom-right"
+  ;
   padding: 10px 5%;
 }
 
-#top-banner .top-left {
-  grid-area: 1 / 1 / 2 / 2;
+.top-left, .top-right, .top-right div, .bottom-left .greeting, .bottom-left .handle, .bottom-right, .bottom-right .create {
   display: flex;
-  align-items: center;
-  
 }
 
-.top-left input[id="search"] {
-  margin-right: 10px;
-  margin-left: 10px;
+.top-left, .top-right, .top-right div, .bottom-left, .bottom-right .create {
+  align-items: center;
+}
+
+.top-right, .bottom-right {
+  justify-content: flex-end;
+}
+
+/* Top left section */
+.top-left {
+  grid-area: top-left;
+}
+
+input[id="search"] {
+  margin: 0px 10px;
+  padding: 0px 10px;
   width: 100%;
   background-color: var(--searchbar-color);
   height: 28px;
   border-radius: 15px;
   border: none;
-  padding-left: 10px;
-  padding-right:10px;
 }
 
-.top-left label[for="search"] {
+label[for="search"] {
   cursor: pointer;
 }
 
-#top-banner .top-right {
-  grid-area: 1 / 2 / 2 / 3;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.top-right {
+  grid-area: top-right;
   font-size: 18px;
   font-weight: 600;
 }
@@ -165,16 +173,13 @@ body {
   cursor: pointer;
 }
 
-#top-banner .top-right div {
-  display: flex;
-  align-items: center;
+.top-right div {
   color: var(--searchbar-icon-color);
 }
 
 .top-right .prof-pic {
   max-width: 80px;
 }
-
 
 img {
   width: 2.5em;
@@ -185,17 +190,15 @@ img {
   object-fit: contain;
 }
 
-#top-banner .bottom-left {
-  grid-area: 2 / 1 / 3 / 2;
+.bottom-left {
+  grid-area: bottom-left;
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 1fr 1fr;
-  align-items: center;
 }
 
 .bottom-left .prof-pic {
   grid-area: 1 / 1 / -1 / 2;
-
 }
 
 .bottom-left img {
@@ -205,7 +208,6 @@ img {
 
 .bottom-left .greeting {
   grid-area: 1 / 2 / 2 / -1;
-  display: flex;
   height: 100%;
   align-items: flex-end;
   margin-left: 4px;
@@ -215,24 +217,19 @@ img {
 
 .bottom-left .handle {
   grid-area: 2 / 2 / 3 / 3;
-  display: flex;
   height: 100%;
   margin-left: 4px;
   font-size: 18px;
   font-weight: 700;
 }
 
-#top-banner .bottom-right {
-  grid-area: 2 / 2 / 3 / 3;
-  display: flex;
-  justify-content: flex-end;
+.bottom-right {
+  grid-area: bottom-right;
 }
 
-#top-banner .bottom-right .create {
-  display: flex;
-  align-items: center;
-}
 
+/* MAIN DASHBOARD */
+/* ---------------------------------------------------- */
 #main-dashboard {
   grid-area: main-dashboard;
   background-color: var(--main-dashboard-color);
