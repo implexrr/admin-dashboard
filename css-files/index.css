@@ -149,10 +149,6 @@ body {
   justify-content: flex-end;
 }
 
-label[for="search"], .top-right * {
-  cursor: pointer;
-}
-
 /* Top left section */
 .top-left {
   grid-area: top-left;
@@ -476,7 +472,7 @@ img[id="slide"] {
   100% { transform: rotate(10deg); }
 }
 
-#options li:hover, .card:hover svg, .project-title span:hover, .announcement-card .title span:hover, .trender:hover .proj-name, .trender:hover .handle, button:hover, .trender *:hover{
+#options li:hover, .card:hover svg, .project-title span:hover, .announcement-card .title span:hover, .trender:hover .proj-name, .trender:hover .handle, button:hover, .trender *:hover, label[for="search"], .top-right * {
   cursor: pointer;
 }
 
