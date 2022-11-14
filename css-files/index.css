@@ -40,18 +40,23 @@
   background-color: var(--menu-bg-color);
   color: var(--menu-t-color);
 }
+
 #top-banner, .card, .project-icons button, .announcement-cards, .trender-cards {
   background-color: var(--card-bg-color);
 }
+
 #top-banner, .announcement-card .title, .trender .handle, .trender .proj-name {
   color: var(--header-t-color);
 }
+
 input[id="search"] {
   background-color: var(--searchbar-t-color);
 }
+
 #main-dashboard {
   background-color: var(--main-dashboard-bg-color);
 }
+
 .project-cards .project-description, .trender .proj-name, .announcements .description {
   color: var(--card-description-t-color);
 }
@@ -62,6 +67,7 @@ body, #options, #top-banner, #main-dashboard {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 body::-webkit-scrollbar, #options::-webkit-scrollbar, #top-banner::-webkit-scrollbar, #main-dashboard::-webkit-scrollbar {
   display: none;
 }
@@ -79,6 +85,7 @@ body
 , .right-side, .announcements, .announcement-cards, .announcement-card, .trending, .trender, .trender-cards {
   display: grid;
 }
+
 .prof-pic, .handle
 , .top-left, .top-right, .top-right div, .greeting, .bottom-right, .create
 , .card > *, .project-icons button, .title
@@ -94,6 +101,7 @@ body
 , .announcement-card > * {
   width: 100%;
 }
+
 .prof-pic
 , .bottom-left, .bottom-left .greeting, .handle
 , .card
@@ -105,19 +113,23 @@ body
 .prof-pic, .project-icons button {
   justify-content: center;
 }
+
 .top-right, .bottom-right, .project-icons {
   justify-content: flex-end;
 }
+
 .prof-pic
 , #options li
 , .top-left, .top-right, .top-right div, .bottom-left, .bottom-right .create
 , .project-icons {
   align-items: center;
 }
+
 .trender .proj-name {
   align-items: flex-start;
 }
-.bottom-left .greeting, .announcement-card .title, .trender .handle, .trender .proj-name {
+
+.bottom-left .greeting, .announcement-card .title, .trender .handle {
   align-items: flex-end;
 }
 
@@ -125,6 +137,7 @@ body
 .header, #options, .top-right, #top-banner button, .greeting, .project-title, .announcement-card .title {
   font-weight: 600;
 }
+
 .burger, .bottom-left .handle {
   font-weight: 700;
 }
@@ -132,6 +145,14 @@ body
 /* Misc */
 ul {
   list-style-type: none;
+}
+
+img {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 100%;
+  overflow: hidden;
+  object-fit: contain;
 }
 
 body {
@@ -164,13 +185,12 @@ body {
 .burger {
   grid-row: 1 / 2;
   min-height: 100px;
-  font-size: 24px;
   padding: 20px 10px;
+  font-size: 24px;
 }
 
 #options {
   font-size: 18px;
-
   grid-template-rows: repeat(10, clamp(30px, 8%, 50px));
 }
 
@@ -180,25 +200,25 @@ body {
 }
 
 #options li:first-child, .selected-burger {
+  padding: 4px;
   opacity: 1;
   box-shadow: var(--selected-bshadow);
   border-left: var(--selected-border);
-  padding: 4px;
 }
 
 
 /* TOP BANNER */
 /* ---------------------------------------------------- */
-/* Top banner meta */
+/* Top banner layout */
 #top-banner {
   grid-area: top-banner;
+  padding: 10px 5%;
   grid-template-columns: 5fr 2fr;
   grid-template-rows: 2fr 3fr;
   grid-template-areas: 
   "top-left top-right"
   "bottom-left  bottom-right"
   ;
-  padding: 10px 5%;
 }
 
 /* Top left section */
@@ -207,9 +227,9 @@ body {
 }
 
 input[id="search"] {
+  height: 28px;
   margin: 0px 10px;
   padding: 0px 10px;
-  height: 28px;
   border-radius: 15px;
 }
 
@@ -221,14 +241,6 @@ input[id="search"] {
 
 .top-right .prof-pic {
   max-width: 80px;
-}
-
-img {
-  width: 2.5em;
-  height: 2.5em;
-  border-radius: 100%;
-  overflow: hidden;
-  object-fit: contain;
 }
 
 /* Bottom left section */
@@ -265,9 +277,9 @@ img {
 }
 
 #top-banner button {
-  border-radius: 20px;
   height: 40px;
   width: 90px;
+  border-radius: 20px;
   overflow: hidden;
   font-size: 15px;
 }
@@ -279,8 +291,8 @@ img {
 
 /* MAIN DASHBOARD */
 /* ---------------------------------------------------- */
-/* Main Dashboard - Left Side (project cards) */
 
+/* Main Dashboard - Left Side (project cards) */
 .project-title, .project-description, .project-icons {
   flex-wrap: wrap;
 }
@@ -312,11 +324,11 @@ img {
 }
 
 .card {
-  grid-template-rows: 20% 60% 20%;
   padding: 10px;
   border-left: solid 8px #fde047;
   border-radius: 10px;
   box-shadow: var(--card-box-shadow);
+  grid-template-rows: 20% 60% 20%;
 }
 
 svg {
@@ -339,6 +351,7 @@ svg {
   position: relative;
   overflow: hidden;
 }
+
 img[id="slide"] {
   border-radius: 0;
 }
@@ -353,16 +366,15 @@ img[id="slide"] {
 }
 
 /* Main Dashboard -- Right Side */
-
 .trender .handle, .trender .proj-name, .announcement-card .description {
   font-size: 12px;
 }
 
 .right-side {
   grid-column: 2 / 3;
+  padding: 15px;
   grid-template-rows: 4fr 3fr;
   row-gap: 15px;
-  padding: 15px;
 }
 
 .announcements {
@@ -373,13 +385,13 @@ img[id="slide"] {
 .announcement-cards {
   padding: 20px;
   border-radius: 15px;
-  grid-template-rows: repeat(3, 1fr);
   box-shadow: var(--card-box-shadow);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .announcement-card {
-  grid-template-rows: 20% 80%;
   min-width: 50px;
+  grid-template-rows: 20% 80%;
 }
 
 .announcement-card .title {
@@ -397,17 +409,17 @@ img[id="slide"] {
 }
 
 .trender-cards {
-  grid-template-rows: repeat(4, 1fr);
   box-shadow: var(--card-box-shadow);
   border-radius: 15px;
   font-size: 14px;
+  grid-template-rows: repeat(4, 1fr);
 }
 
 .trender {
-  grid-template-columns: 1fr 5fr;
-  column-gap: 10px;
   padding-left: 10px;
+  grid-template-columns: 1fr 5fr;
   grid-template-rows: 1fr 1fr;
+  column-gap: 10px;
 }
 
 .trender:first-child {
@@ -447,12 +459,34 @@ img[id="slide"] {
   100% { transform: rotate(10deg); }
 }
 
+/* Background color change */
 .card svg:hover, .trender:hover, .trender:hover .proj-name, .trender:hover .handle, button:hover {
   background-color: var(--menu-bg-color);
 }
 
-#options li:hover, .card:hover svg, .project-title span:hover, .announcement-card .title span:hover, .trender:hover .proj-name, .trender:hover .handle, button:hover, .trender *:hover, label[for="search"], .top-right * {
-  cursor: pointer;
+.announcement-card .title span:hover {
+  color: var(--menu-bg-color);
+}
+
+.trender:hover .proj-name, .trender:hover .handle, button:hover {
+  color: var(--menu-t-color);
+}
+
+.project-title span:hover {
+  color: var(--card-border-opposite);
+}
+
+/* Opacity and shadow change */
+.top-left input[id="search"]:hover, .top-left input[id="search"]:focus, .top-right .prof-pic:hover, .trender:hover .proj-name, .trender:hover .handle, button:hover {
+  opacity: 0.8;
+}
+
+.project-title span:hover {
+  opacity: 1;
+}
+
+#options li:empty:hover {
+  box-shadow: none;
 }
 
 #options li:hover {
@@ -460,18 +494,18 @@ img[id="slide"] {
   transition: ease-in-out 0.2s;
 }
 
+/* Cursor change */
 #options li:empty:hover {
   cursor: default;
-  box-shadow: none;
 }
 
+#options li:hover, .card:hover svg, .project-title span:hover, .announcement-card .title span:hover, .trender:hover .proj-name, .trender:hover .handle, button:hover, .trender *:hover, label[for="search"], .top-right * {
+  cursor: pointer;
+}
+
+/* Miscellaneous */
 .top-left input[id="search"]:hover, .top-left input[id="search"]:focus{
-  opacity: 0.8;
   outline: none;
-}
-
-.top-right .prof-pic:hover {
-  opacity: 0.8;
 }
 
 #notif:hover {
@@ -482,18 +516,4 @@ img[id="slide"] {
 .card:hover #slide {
   transition: 0.7s;
   left: 0;
-}
-
-.project-title span:hover {
-  color: var(--card-border-opposite);
-  opacity: 1;
-}
-
-.announcement-card .title span:hover {
-  color: var(--menu-bg-color);
-}
-
-.trender:hover .proj-name, .trender:hover .handle, button:hover {
-  color: var(--menu-t-color);
-  opacity: 0.8;
 }
