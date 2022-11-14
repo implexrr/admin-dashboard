@@ -1,0 +1,26 @@
+/* VARIABLES */
+/* ---------------------------------------------------- */
+:root {
+  /* Background colors */
+  --menu-bg-color: #0ea5e9;
+  --card-bg-color: #f8fafc;
+  --searchbar-t-color: #b4bac566;
+  --main-dashboard-bg-color: #e2e8f0;
+
+  /* Text colors */
+  --menu-t-color: white;
+  --card-description-t-color: #4b5563ac;
+  --header-t-color: #1e293b;
+
+  /* Shadows */
+  --selected-bshadow: inset 5px 5px 50px 50px rgba(0,0,0,0.19);
+  --main-dashboard-box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  --card-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  --options-hover-box-shadow: inset 5px 5px 50px 50px rgba(0,0,0,0.19);
+
+  /* Borders */
+  --selected-border: solid 6px #076b9a;
+  --card-border: #fde047;
+  --card-border-opposite: #00aeff;
+  --announcement-card-bottom: #45484d66;
+}

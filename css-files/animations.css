@@ -1,0 +1,68 @@
+/* ANIMATIONS */
+/* ---------------------------------------------------- */
+@keyframes shake {
+  0% { transform:rotate(10deg); }
+  25% { transform:rotate(0deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(0deg); }
+  100% { transform: rotate(10deg); }
+}
+
+/* Background color change */
+.card svg:hover, .trender:hover, .trender:hover .proj-name, .trender:hover .handle, button:hover {
+  background-color: var(--menu-bg-color);
+}
+
+.announcement-card .title span:hover {
+  color: var(--menu-bg-color);
+}
+
+.trender:hover .proj-name, .trender:hover .handle, button:hover {
+  color: var(--menu-t-color);
+}
+
+.project-title span:hover {
+  color: var(--card-border-opposite);
+}
+
+/* Opacity and shadow change */
+.top-left input[id="search"]:hover, .top-left input[id="search"]:focus, .top-right .prof-pic:hover, .trender:hover .proj-name, .trender:hover .handle, button:hover {
+  opacity: 0.8;
+}
+
+.project-title span:hover {
+  opacity: 1;
+}
+
+#options li:empty:hover {
+  box-shadow: none;
+}
+
+#options li:hover {
+  box-shadow: var(--options-hover-box-shadow);
+  transition: ease-in-out 0.2s;
+}
+
+/* Cursor change */
+#options li:empty:hover {
+  cursor: default;
+}
+
+#options li:hover, .card:hover svg, .project-title span:hover, .announcement-card .title span:hover, .trender:hover .proj-name, .trender:hover .handle, button:hover, .trender *:hover, label[for="search"], .top-right * {
+  cursor: pointer;
+}
+
+/* Miscellaneous */
+.top-left input[id="search"]:hover, .top-left input[id="search"]:focus{
+  outline: none;
+}
+
+#notif:hover {
+    animation: shake 0.2s;
+    animation-iteration-count: infinite;
+}
+
+.card:hover #slide {
+  transition: 0.7s;
+  left: 0;
+}

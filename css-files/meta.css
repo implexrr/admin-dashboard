@@ -1,0 +1,139 @@
+/* ENTIRE DOCUMENT/META */
+/* ---------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+}
+
+/* Colors */
+.menu, #top-banner button {
+  background-color: var(--menu-bg-color);
+  color: var(--menu-t-color);
+}
+
+#top-banner, .card, .project-icons button, .announcement-cards, .trender-cards {
+  background-color: var(--card-bg-color);
+}
+
+#top-banner, .announcement-card .title, .trender .handle, .trender .proj-name {
+  color: var(--header-t-color);
+}
+
+input[id="search"] {
+  background-color: var(--searchbar-t-color);
+}
+
+#main-dashboard {
+  background-color: var(--main-dashboard-bg-color);
+}
+
+.project-cards .project-description, .trender .proj-name, .announcements .description {
+  color: var(--card-description-t-color);
+}
+
+/* Scrollbars */
+body, #options, #top-banner, #main-dashboard {
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar, #options::-webkit-scrollbar, #top-banner::-webkit-scrollbar, #main-dashboard::-webkit-scrollbar {
+  display: none;
+}
+
+/* Borders */
+img, button, input[id="search"], .announcement-card:first-child .title {
+  border: none;
+}
+
+/* Grid and Flex displays */
+body
+, #top-banner, .bottom-left
+, .menu, .burger, #options, #options li
+, #main-dashboard, .project-cards, .cards, .card
+, .right-side, .announcements, .announcement-cards, .announcement-card, .trending, .trender, .trender-cards {
+  display: grid;
+}
+
+.prof-pic, .handle
+, .top-left, .top-right, .top-right div, .greeting, .bottom-right, .create
+, .card > *, .project-icons button, .title
+, .proj-name, .announcement {
+  display: flex;
+}
+
+/* Width and height (percentage only) */
+.prof-pic
+, body
+, input[id="search"]
+, .project-title, .project-description, .project-icons
+, .announcement-card > * {
+  width: 100%;
+}
+
+.prof-pic
+, .bottom-left, .bottom-left .greeting, .handle
+, .card
+, .trender .handle, .trender .proj-name, .announcement-card .description {
+  height: 100%;
+}
+
+/* Justification and alignment */
+.prof-pic, .project-icons button {
+  justify-content: center;
+}
+
+.top-right, .bottom-right, .project-icons {
+  justify-content: flex-end;
+}
+
+.prof-pic
+, #options li
+, .top-left, .top-right, .top-right div, .bottom-left, .bottom-right .create
+, .project-icons {
+  align-items: center;
+}
+
+.trender .proj-name {
+  align-items: flex-start;
+}
+
+.bottom-left .greeting, .announcement-card .title, .trender .handle {
+  align-items: flex-end;
+}
+
+/* Font styles */
+.header, #options, .top-right, #top-banner button, .greeting, .project-title, .announcement-card .title {
+  font-weight: 600;
+}
+
+.burger, .bottom-left .handle {
+  font-weight: 700;
+}
+
+/* Misc */
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 100%;
+  overflow: hidden;
+  object-fit: contain;
+}
+
+body {
+  height: 100vh;
+
+  grid-template-columns: max(250px, 20%) max(80vh, 80%);
+  grid-template-rows: max-content 1fr;
+  grid-template-areas: 
+  "menu top-banner"
+  "menu  main-dashboard"
+  ;
+}
