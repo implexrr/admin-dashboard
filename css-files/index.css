@@ -347,6 +347,36 @@ img[id="slide"] {
 .right-side, .announcements, .announcement-cards, .announcement-card, .trending, .trender, .trender-cards {
   display: grid;
 }
+
+.announcement-card .title, .trender .handle, .trender .proj-name, .announcement {
+  display: flex;
+}
+
+.announcement-card .title, .trender .handle, .trender .proj-name {
+  align-items: flex-end;
+}
+
+.announcement-cards, .trender-cards {
+  background-color: var(--card-bg-color);
+}
+
+.announcement-card .title, .trender .handle, .trender .proj-name {
+  color: var(--card-title-color);
+}
+
+.trender .proj-name, .announcements .description {
+  color: var(--card-description-color);
+}
+
+.announcement .title, .announcements .description {
+  width: 100%;
+}
+
+.trender .handle, .trender .proj-name, .announcement-card .description {
+  height: 100%;
+  font-size: 12px;
+}
+
 .right-side {
   grid-column: 2 / 3;
   grid-template-rows: 4fr 3fr;
@@ -362,8 +392,7 @@ img[id="slide"] {
 .announcement-cards {
   padding: 20px;
   border-radius: 15px;
-  background-color: var(--card-bg-color);
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
   box-shadow: var(--card-box-shadow);
 }
 
@@ -373,17 +402,12 @@ img[id="slide"] {
 }
 
 .announcement-card .title {
-  display: flex;
-  align-items: flex-end;
-
-  color: var(--card-title-color);
   box-shadow: rgba(73, 70, 72, 0.4) 0px 5px;
   font-size: 14px;
   font-weight: 600;
 }
 
 .announcement-card .description {
-  font-size: 12px;
   padding-top: 5px;
 }
 
@@ -397,12 +421,10 @@ img[id="slide"] {
 }
 
 .trender-cards {
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
   box-shadow: var(--card-box-shadow);
-  background-color: var(--card-bg-color);
   border-radius: 15px;
   font-size: 14px;
-
 }
 
 .trender {
@@ -422,38 +444,24 @@ img[id="slide"] {
   border-bottom-right-radius: 15px;
 }
 
-
-
 .trender .prof-pic {
   grid-area: 1 / 1 / -1 / 2;
 }
 
-.trender .handle, .trender .proj-name {
-  display: flex;
-  height: 100%;
-  align-items: flex-end;
-  color: var(--card-title-color);
-  font-size: 12px;
-}
-
 .trender .proj-name {
   align-items: flex-start;
-  color: var(--card-description-color);
 }
+
 .announcement {
-  display: flex;
   flex-wrap: wrap;
 }
 
 .announcement .title {
-  width: 100%;
   height: 20px;
 }
 
 .announcements .description {
-  width: 100%;
   height: calc(100% - 20px);
-  color: var(--card-description-color);
 }
 
 
