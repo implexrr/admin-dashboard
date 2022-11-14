@@ -86,7 +86,7 @@ body
   display: flex;
 }
 
-/* Width and height */
+/* Width and height (percentage only) */
 .prof-pic
 , body
 , input[id="search"]
@@ -121,9 +121,15 @@ body
   align-items: flex-end;
 }
 
+/* Font styles */
+.header, #options, .top-right, #top-banner button, .greeting, .project-title, .announcement-card .title {
+  font-weight: 600;
+}
+.burger, .bottom-left .handle {
+  font-weight: 700;
+}
 
-/* Font styling */
-
+/* Misc */
 ul {
   list-style-type: none;
 }
@@ -138,9 +144,6 @@ body {
   "menu  main-dashboard"
   ;
 }
-
-
-
 
 /* LEFT-SIDE BURGER MENU */
 /* ---------------------------------------------------- */
@@ -162,13 +165,11 @@ body {
   grid-row: 1 / 2;
   min-height: 100px;
   font-size: 24px;
-  font-weight: 700;
   padding: 20px 10px;
 }
 
 #options {
   font-size: 18px;
-  font-weight: 600;
 
   grid-template-rows: repeat(10, clamp(30px, 8%, 50px));
 }
@@ -216,7 +217,6 @@ input[id="search"] {
 .top-right {
   grid-area: top-right;
   font-size: 18px;
-  font-weight: 600;
 }
 
 .top-right .prof-pic {
@@ -251,14 +251,12 @@ img {
   grid-area: 1 / 2 / 2 / -1;
   margin-left: 4px;
   font-size: 16px;
-  font-weight: 600;
 }
 
 .bottom-left .handle {
   grid-area: 2 / 2 / 3 / 3;
   margin-left: 4px;
   font-size: 18px;
-  font-weight: 700;
 }
 
 /* Bottom right section */
@@ -271,7 +269,6 @@ img {
   height: 40px;
   width: 90px;
   overflow: hidden;
-  font-weight: 500;
   font-size: 15px;
 }
 
@@ -302,7 +299,6 @@ img {
 
 .header {
   padding-left: 5px;
-  font-weight: 600;
   font-size: 20px;
 }
 
@@ -349,7 +345,6 @@ img[id="slide"] {
 
 .project-title {
   font-size: 20px;
-  font-weight: 600;
 }
 
 .project-icons button {
@@ -390,7 +385,6 @@ img[id="slide"] {
 .announcement-card .title {
   box-shadow: rgba(73, 70, 72, 0.4) 0px 5px;
   font-size: 14px;
-  font-weight: 600;
 }
 
 .announcement-card .description {
