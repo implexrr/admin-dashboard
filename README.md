@@ -1,6 +1,6 @@
 # Admin Dashboard
 
-Admin Dashboard is the final project from the [Intermediate HTML and CSS](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css) section of [The Odin Project](https://www.theodinproject.com/paths/foundations/courses/foundations). It is intended to give students an opportunity to combine intermediate CSS concepts such as custom properties, CSS units/functions and advanced selectors with CSS Grid. Working demo [here](https://implexrr.github.io/admin-dashboard/). As the project is meant to be just the UI portion of an admin dashboard, the project is written entirely in vanilla HTML/CSS.
+Admin Dashboard is the final project from the [Intermediate HTML and CSS](https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css) section of [The Odin Project](https://www.theodinproject.com). It is intended to give students an opportunity to combine intermediate CSS concepts such as custom properties, CSS units/functions and advanced selectors with CSS Grid. Working demo [here](https://implexrr.github.io/admin-dashboard/). As the project is meant to be just the UI portion of an admin dashboard, the project is written entirely in vanilla HTML/CSS.
 
 ![](./assets/images/admin-dashboard-demo.png)
 
